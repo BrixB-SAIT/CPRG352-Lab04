@@ -1,6 +1,10 @@
-
 package noteserv;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -25,8 +29,12 @@ public class NoteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String path = getServletContext().getRealPath("/WEB-INF/note.txt");
+// to read files
+        BufferedReader br = new BufferedReader(new FileReader(new File(path)));
+// to write to a file
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false)));
+
     }
-
-
 
 }
