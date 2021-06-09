@@ -18,11 +18,11 @@
         <br>
         <form method="post" action="note">
         <label>Title:</label>
-        <input type="text" name="title" value="${inTitle}">
+        <input type="text" name="title" value="${note.title}">
         <br>
         <label>Contents:</label>
-        <input type="text" name="contents" value="${inContents}">
-               
+        <textarea type="text" name="contents" value="${inContents}">${note.contents}</textarea>
+        <br>
         <input type="submit" value="Save">
         </form>
         

@@ -37,7 +37,7 @@ public class Note implements Serializable {
     public void setContents(String contents) {
         this.contents = contents;
     }
-
+// not needed
     @Override
     public String toString() {
         return "Note{" + "title=" + title + ", contents=" + contents + '}';
